@@ -1,0 +1,20 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet author="quarkus" id="1" dbms="oracle">
+        <createTable tableName="FIRST_ENTITY">
+            <column name="ID" type="BIGINT">
+                <constraints primaryKey="true"
+                             primaryKeyName="FIRST_ENTITY_PK"
+                             nullable="false"/>
+            </column>
+            <column name="CREATE_DATE" type="DATE"/>
+            <column name="CREATE_TIMESTAMP" type="TIMESTAMP"/>
+            <column name="CREATE_TIMESTAMP_INSTANT" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

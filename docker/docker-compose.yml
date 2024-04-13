@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  oracle:
+    image: gvenzl/oracle-xe:21-slim-faststart
+    ports:
+      - 1521:1521
+    environment:
+      - ORACLE_PASSWORD=admin
+      - APP_USER=myuser
+      - APP_USER_PASSWORD=myuser
+    volumes:
+      - /home/sql:/container-entrypoint-initdb.d
