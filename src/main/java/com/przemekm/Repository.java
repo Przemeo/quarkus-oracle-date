@@ -41,7 +41,7 @@ public class Repository {
 
     @Transactional
     public FirstEntity getEntity(long id) {
-        //To zwraca Asia/Seoul, czyli to co idzie w skrypcie z /home/sql/init.sql
+        //To zwraca Asia/Seoul, czyli to co idzie w skrypcie z /home/sql/script.sh
         log.info((String) entityManager.createNativeQuery("SELECT DBTIMEZONE FROM DUAL").getSingleResult());
         //To zwraca Europe/Warsaw - dziwne, timezone JVM jest inny
         log.info((String) entityManager.createNativeQuery("SELECT SESSIONTIMEZONE FROM DUAL").getSingleResult());
